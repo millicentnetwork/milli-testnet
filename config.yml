@@ -1,0 +1,35 @@
+accounts:
+  - name: main
+    coins: ["100000000000000milli"]
+  - name: faucet
+    coins: ["50000000000000milli"]
+validator:
+  name: main
+  staked: "10000000000000milli"
+faucet:
+  name: faucet 
+  coins: ["10milli"]
+build:
+  binary: "millid"
+init:
+  home: "$HOME/.millid"
+genesis:
+  chain_id: "millicent-testnet"
+  app_state:
+    staking:
+      params:
+        bond_denom: "milli"
+    mint:
+      params:
+        mint_denom: "milli"
+    crisis:
+      constant_fee:
+        denom: "milli"
+    gov:
+      deposit_params:
+        min_deposit:
+          - amount: "10"
+            denom: "milli"
+    evm:
+      params:
+        evm_denom: "milli"
