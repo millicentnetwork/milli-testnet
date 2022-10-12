@@ -1,5 +1,12 @@
-# millid
-**millid** is a blockchain built using Cosmos SDK and Tendermint and created with [Starport](https://starport.com).
+# Millid
+**Millid** is a distributed blockchain for financial services built using Cosmos SDK and Tendermint and created with [Starport](https://starport.com). It delivers benefits to the financial services participants and developers via its open-source platform based on Tnedermint consensus engine. 
+
+# Why Millid?
+
+It's a blockchain based on microservice application that connects Cosmos-powered blockchains. The Millid-client runs on pure Cosmos Modules coded in Golang. It establishes a connection to a blockchain endpoint and executes instructions on that blockchain. Because the Millid-client is modular, the blockchain can be readily modified.
+
+To receive requests, the Millid-client establishes a web server.
+Startport is a code-based tool used for regulating Cosmos ecosystem. 
 
 ## Get started
 
