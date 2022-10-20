@@ -1,5 +1,5 @@
 # Millid
-**Millid** is a distributed blockchain for financial services built using Cosmos SDK and Tendermint and created with [Starport](https://starport.com). It delivers benefits to the financial services participants and developers via its open-source platform based on Tnedermint consensus engine. 
+**Millid** is a distributed ledger designed to support financial services built using the Cosmos SDK and created with [Starport](https://starport.com). It delivers benefits to the financial services participants and developers via its open-source platform based on Tendermint consensus engine. 
 
 # Why Millid?
 
