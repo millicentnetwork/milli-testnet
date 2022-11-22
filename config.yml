@@ -1,35 +1,62 @@
-accounts:
-  - name: main
-    coins: ["100000000000000milli"]
-  - name: faucet
-    coins: ["50000000000000milli"]
-validator:
-  name: main
-  staked: "10000000000000milli"
-faucet:
-  name: faucet 
-  coins: ["10milli"]
+version: 1
 build:
-  binary: "millid"
-init:
-  home: "$HOME/.millid"
+  binary: millid
+  proto:
+    path: proto
+    third_party_paths:
+    - third_party/proto
+    - proto_vendor
+accounts:
+- name: millicent-primary
+  coins:
+  - 4950000000000000uMILLI
+- name: faucet
+  coins:
+  - 4950000000000000uMILLI
+faucet:
+  name: faucet
+  coins:
+  - 100uMILLI
+  host: 0.0.0.0:4500
 genesis:
-  chain_id: "millicent-testnet"
+  consensus_params:
+    block:
+      max_gas: "6000000"
   app_state:
-    staking:
-      params:
-        bond_denom: "milli"
-    mint:
-      params:
-        mint_denom: "milli"
     crisis:
       constant_fee:
-        denom: "milli"
+        denom: uMILLI
+    evm:
+      params:
+        evm_denom: uMILLI
     gov:
       deposit_params:
         min_deposit:
-          - amount: "10"
-            denom: "milli"
-    evm:
+        - amount: "100000000"
+          denom: uMILLI
+    mint:
+      minter:
+        inflation: "0.000000000000000000"   
+        annual_provisions: "0.000000000000000000"
       params:
-        evm_denom: "milli"
+        mint_denom: uMILLI
+        inflation_max: "0.000000000000000000"
+        inflation_min: "0.000000000000000000"
+        goal_bonded: "1.000000000000000000"
+        blocks_per_year: "15778800"
+    staking:
+      params:
+        bond_denom: uMILLI
+    slashing:
+      params:
+        downtime_jail_duration: "86400s"
+    crisis:
+      constant_fee:
+        denom: uMILLI
+        amount: "1000"
+    wasm:
+      params:
+        instantiate_default_permission: Nobody
+  chain_id: millicent-testnet
+
+
