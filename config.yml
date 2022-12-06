@@ -7,12 +7,15 @@ build:
     - third_party/proto
     - proto_vendor
 accounts:
-- name: millicent-primary
-  coins:
-  - 4950000000000000uMILLI
-- name: faucet
-  coins:
-  - 4950000000000000uMILLI
+  - name: millicent-primary
+    coins:
+    - 4950000000000000uMILLI
+  - name: faucet
+    coins:
+    - 4950000000000000uMILLI
+validators:
+  - name: mLabs1-val
+    bonded: "25000000000000uMILLI"
 faucet:
   name: faucet
   coins:
@@ -58,6 +61,3 @@ genesis:
       params:
         instantiate_default_permission: Nobody
   chain_id: millicent-testnet
- validators:
-   - name: mLabs1-val
-     bonded: "25000000000000uMILLI"
