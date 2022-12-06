@@ -58,6 +58,3 @@ genesis:
       params:
         instantiate_default_permission: Nobody
   chain_id: millicent-testnet
-validators:
-  - name: mLabs1-val
-    bonded: "25000000000000uMILLI"
